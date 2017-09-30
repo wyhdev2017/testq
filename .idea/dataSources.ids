@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - mybatis@localhost" uuid="fd782d66-1caf-4623-9ed8-fe4ec22e767e">
+    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="mybatis"/>
+      <table id="2" parent="1" name="book"/>
+      <table id="3" parent="1" name="class"/>
+      <table id="4" parent="1" name="course"/>
+      <table id="5" parent="1" name="department"/>
+      <table id="6" parent="1" name="order_book"/>
+      <table id="7" parent="1" name="resource"/>
+      <table id="8" parent="1" name="role"/>
+      <table id="9" parent="1" name="section"/>
+      <table id="10" parent="1" name="speciality"/>
+      <table id="11" parent="1" name="staff"/>
+      <table id="12" parent="1" name="student"/>
+      <table id="13" parent="1" name="takes"/>
+      <table id="14" parent="1" name="tbl_account"/>
+      <table id="15" parent="1" name="timetable"/>
+      <table id="16" parent="1" name="user"/>
+      <column id="17" parent="2" name="book_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="18" parent="2" name="isbn">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="19" parent="2" name="date_of_printing">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="20" parent="2" name="author">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="21" parent="2" name="press">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="22" parent="2" name="category">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="23" parent="2" name="unit_price">
+        <data-type>float</data-type>
+      </column>
+      <key id="24" parent="2" name="PRIMARY">
+        <columns>book_title
+isbn</columns>
+        <primary>1</primary>
+      </key>
+      <column id="25" parent="3" name="class_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="26" parent="3" name="class_name">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="27" parent="3" name="year">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="28" parent="3" name="spec_name">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <key id="29" parent="3" name="PRIMARY">
+        <columns>class_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="30" parent="4" name="course_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="31" parent="4" name="type">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="32" parent="4" name="credits">
+        <data-type>float</data-type>
+      </column>
+      <column id="33" parent="4" name="speciality">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <key id="34" parent="4" name="PRIMARY">
+        <columns>course_title</columns>
+        <primary>1</primary>
+      </key>
+      <column id="35" parent="5" name="dept_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="36" parent="5" name="dept_name">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <key id="37" parent="5" name="PRIMARY">
+        <columns>dept_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="38" parent="6" name="staff_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="39" parent="6" name="sec_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="40" parent="6" name="book_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="41" parent="6" name="isbn">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="42" parent="6" name="remark">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="43" parent="6" name="approval">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="44" parent="6" name="PRIMARY">
+        <columns>staff_id
+sec_id
+book_title
+isbn</columns>
+        <primary>1</primary>
+      </key>
+      <column id="45" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="46" parent="7" name="name">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="47" parent="7" name="type">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="48" parent="7" name="url">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="49" parent="7" name="parent_id">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="50" parent="7" name="parent_ids">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="51" parent="7" name="permission">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="52" parent="7" name="available">
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="53" parent="7" name="idx_resource_parent_id">
+        <columns>parent_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="54" parent="7" name="idx_resource_parent_ids">
+        <columns>parent_ids</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="55" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="56" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="57" parent="8" name="role">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="58" parent="8" name="description">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="59" parent="8" name="resource_ids">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="60" parent="8" name="available">
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="61" parent="8" name="idx_sys_role_resource_ids">
+        <columns>resource_ids</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="62" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="63" parent="9" name="sec_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="64" parent="9" name="course_title">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="65" parent="9" name="year">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="66" parent="9" name="limitCount">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="67" parent="9" name="staff_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="68" parent="9" name="PRIMARY">
+        <columns>sec_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="69" parent="10" name="spec_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="70" parent="10" name="dept_name">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="71" parent="10" name="spec_name">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="72" parent="10" name="year">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <key id="73" parent="10" name="PRIMARY">
+        <columns>spec_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="74" parent="11" name="staff_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="75" parent="11" name="staff_name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="76" parent="11" name="PRIMARY">
+        <columns>staff_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="77" parent="12" name="student_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="78" parent="12" name="student_name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="79" parent="12" name="id_card">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="80" parent="12" name="year">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="81" parent="12" name="class_id">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="82" parent="12" name="telephone_number">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="83" parent="12" name="student_origin_base">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="84" parent="12" name="gender">
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="85" parent="12" name="pic_path">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="86" parent="12" name="leave_of_absence">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="87" parent="12" name="leave_school">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="88" parent="12" name="PRIMARY">
+        <columns>student_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="89" parent="13" name="student_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="90" parent="13" name="sec_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="91" parent="13" name="score">
+        <data-type>float</data-type>
+      </column>
+      <key id="92" parent="13" name="PRIMARY">
+        <columns>student_id
+sec_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="93" parent="14" name="money">
+        <data-type>int(10)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="94" parent="15" name="sec_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="95" parent="15" name="time">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="96" parent="15" name="weeks">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="97" parent="15" name="week">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="98" parent="15" name="classroom">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="99" parent="16" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="100" parent="16" name="password">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="101" parent="16" name="salt">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="102" parent="16" name="role_ids">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="103" parent="16" name="locked">
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <index id="104" parent="16" name="idx_user_username">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="105" parent="16" name="idx_user_username">
+        <columns>user_id</columns>
+        <underlying-index>idx_user_username</underlying-index>
+      </key>
+      <key id="106" parent="16" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
